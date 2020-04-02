@@ -1,3 +1,5 @@
+# React Test
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -6,63 +8,77 @@ In the project directory, you can run:
 
 ### `yarn start`
 
-Runs the app in the development mode.<br />
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
+The page will reload if you make edits.
 You will also see any lint errors in the console.
 
 ### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
+Launches the test runner in the interactive watch mode.
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+## INSTRUCTIONS
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The test consist on the creation of a web application in React that in the landing page will show a list of movies and when one of this is clicked, it takes you to another page where more detail info about the movie is displayed. The data will be retrieved via the provided public API:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+For the list of movies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`https://api.themoviedb.org/3/discover/movie?api_key=c857fa67fba523ad3ce66df18e7ab279&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1`
 
-### `yarn eject`
+For the single movie details:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`https://api.themoviedb.org/3/movie/${id}?api_key=65e043c24785898be00b4abc12fcdaae&language=en-US`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+And for the images root path:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+`https://image.tmdb.org/t/p/w300`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Note: This endpoints are already in `./src/App.js` in a commented `const` for easier set up.
 
-## Learn More
+### Visuals
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Visuals for both pages are provided:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[Home](./Visual_Home.jpg)
 
-### Code Splitting
+[Single Movie](./Visual_Movie.jpg)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Note: They are guidelines more than strict visuals, feel free to improve on them.
 
-### Analyzing the Bundle Size
+### Requirements
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- Routing:
+  - The different pages should be handled by some sort of routing library.
+  - No restriction on which library to use.
+- State management:
+  - The data should handled via some sort of state management library or React API.
+  - No restriction on which library to use.
+- Styling:
+  - The website should be responsive and should be cater at least for 2 views: Desktop and Mobile.
+  - The website UI shouldn't look rough.
+  - No restriction to use CSS, SASS or CSS-in-JS
+- Testing:
+  - Not required to test all the components.
+  - Encourage to test different cases more than the happy path.
 
-### Making a Progressive Web App
+### Notes
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+- The use of any libraries is allowed.
+- For easier set up, many libraries has been already installed.
+- Some of this libraries are already config too.
 
-### Advanced Configuration
+## Preinstalled libs
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- react-router-dom
+- redux
+- react-redux
+- redux-thunk
+- styled-components
+- axios
+- node-sass
+- enzyme
+- jest-enzyme
+- @testing-library/react
+- @testing-library/jest-dom
