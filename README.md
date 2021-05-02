@@ -49,6 +49,8 @@ Note: They are guidelines more than strict visuals, feel free to improve on them
 
 ### Requirements
 
+- Typescript:
+  - The use of Typescript is not mandatory but encouraged. Be mindful of time.
 - Routing:
   - The different pages should be handled by some sort of routing library.
   - No restriction on which library to use.
@@ -67,18 +69,43 @@ Note: They are guidelines more than strict visuals, feel free to improve on them
 
 - The use of any libraries is allowed.
 - For easier set up, many libraries has been already installed.
-- Some of this libraries are already config too.
+- Some of this libraries are already configured too.
 
 ## Preinstalled libs
 
+Routing:
+
 - react-router-dom
+- @reach/router
+
+State:
+
 - redux
 - react-redux
 - redux-thunk
-- styled-components
-- axios
+- redux-saga
+- @reduxjs/toolkit
+- recoil
+- @hookstate/core
+
+Styling:
+
 - node-sass
-- enzyme
-- jest-enzyme
+- styled-components
+- emotion
+- @stitches/react
+
+Testing:
+
 - @testing-library/react
+- @testing-library/react-hooks
+- @testing-library/user-event
 - @testing-library/jest-dom
+- jest-styled-components
+- @emotion/jest
+
+Other:
+
+- axios
+- swr
+- react-query

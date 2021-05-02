@@ -2,4 +2,5 @@
 
 import "@testing-library/jest-dom/extend-expect";
 
-// enzyme
+// jest-styled-components
+// import 'jest-styled-components'
